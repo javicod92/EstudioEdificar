@@ -1,0 +1,24 @@
+.footer{
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer_p1{
+    color: #b6b6b6;
+    font-size: 1.1em;
+}
+
+.footer_img{
+    width: 3rem;
+    height: fit-content;
+    opacity: 0.85;
+    margin-left: 1em;
+}
+
+.footer_p2{
+    color: #b6b6b6;
+    font-size: 1.1em;
+    margin-left: 0.5em;
+}

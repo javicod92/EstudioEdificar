@@ -1,0 +1,86 @@
+<!-- Cargo la variable con la dirección de los archivos estáticos -->
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- links para cargar las fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap'); </style>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&display=swap'); </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); </style>
+
+    <!-- links para cargar los estilos generales 'css' de toda la página -->
+    <link rel="stylesheet" href="{% static 'css/principal/general/general.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal/loader/loader.css' %}">
+    <link rel="stylesheet" href="{% static 'css/proyectos/album/album.css' %}">
+
+
+    <!-- link para cargar el logotipo web (pestaña) del estudio de Arquitectura -->
+    <link rel="icon" href="{% static 'img/Favicon.ico' %}">
+
+    <!-- Título de la página web (pestaña) -->
+    <title>Proyectos / {% block title %}{% endblock %}</title>
+</head>
+
+
+<body>
+    <!-- Carga de la Página Web -->
+    <div class="loader">
+        <img src="{% static 'img/Comp-1.gif' %}" alt="Loader">
+    </div>
+
+
+    <!-- Barra de Navegación de la página de Proyectos -->
+    <nav class="nav">
+        <div class="nav_navegacion">
+            <div class="nav_navegacion_boton">
+                <div class="nav_navegacion_boton_img">
+                    <img src="{% static 'img/edificarLogo4.png' %}" alt="Logo" class="nav_navegacion_boton_img_2">
+                </div>
+                <a href="{% url 'home' %}" class="nav_navegacion_boton_a"><img src="{% static 'img/logoHome.png' %}" alt="H"></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Imágen de fondo para la página web -->
+    <div class="background">
+        <div class="background_fondo"></div>
+        <img src="{% static 'img/11.jpg' %}" alt="background" class="background_img">
+    </div>
+
+
+
+    <!-- Insertar el código que se necesita -->
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- Scripts para la carga -->
+    <script src="{% static 'js/loader/loader.js' %}"></script>
+
+</body>
+</html>

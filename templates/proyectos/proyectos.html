@@ -1,0 +1,38 @@
+{% extends "proyectos/baseProy.html" %}
+{% load static %}
+
+{% block title %} Albumes {% endblock %}
+
+<!-- Albumes de fotos para mostrar al usuario -->
+{% block content %}
+<!-- Imágen de portada para la página y descripción -->
+<div class="portada">
+    <div class="portada_cont">
+        <p class="portada_desc1">Conocé nuestros Proyectos</p>
+        <p class="portada_desc2">¡Arquitectura adaptada a tus exigencias!</p>
+    </div>
+</div>
+
+
+<div class="album_contenedor">
+    {% for albumes in album %}
+        <div class="album">
+            <div class="album_contPpal">
+                <img src="{{albumes.imagen_Album.url}}" alt="Album: {{albumes.nombre}}">
+                <div class="album_contPpal_desc">
+                    <!-- Texto del Album de Fotos -->
+                    <div class="album_contPpal_desc_texto">
+                        <h2>{{albumes.nombre}}</h2>
+                        <p>{{albumes.descripcion}}</p>
+                    </div>
+                    
+                    <!-- Botón de ver las fotos del Album -->
+                    <div class="album_contPpal_desc_boton">
+                        <a href="{% url 'proyectos:fotos_album' albumes.pk %}">Ver fotos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

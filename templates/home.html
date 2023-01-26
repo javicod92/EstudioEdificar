@@ -1,0 +1,170 @@
+<!-- Cargo la variable con la dirección de los archivos estáticos -->
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Link para los efectos de las imágenes -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    
+    <!-- links para cargar las fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap'); </style>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&display=swap'); </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); </style>
+
+
+    <!-- links para cargar los estilos generales 'css' de toda la página -->
+    <link rel="stylesheet" href="{% static 'css/principal/general/general.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal/loader/loader.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal/header/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal/descripción/descripción.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal/main/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal/contactos/contactos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/principal/footer/footer.css' %}">
+
+
+    <!-- link para cargar el logotipo web (pestaña) del estudio de Arquitectura -->
+    <link rel="icon" href="{% static 'img/Favicon.ico' %}">
+    
+    <!-- Título de la página web (pestaña) -->
+    <title>EDIFICAR</title>
+</head>
+
+
+<body>
+    <!-- Carga de la Página Web -->
+    <div class="loader">
+        <img src="{% static 'img/Comp-1.gif' %}" alt="Loader">
+    </div>
+    
+
+    <!-- Header de Navegación -->
+    <header id="header" class="header">
+        <div class="header_contenedorPrincipal">
+            <div class="header_contenedorPrincipal_contenedorLogo">
+                <h2>EDIFICAR</h2>
+                <p>ARQUITECTURA & DISEÑO</p>
+            </div>
+            <nav class="header_contenedorPrincipal_navegacion">
+                <a href="{% url 'home' %}">INICIO</a>
+                <a href="#main">ACERCA DE</a>
+                <a href="#contactos">CONTACTO</a>
+                <a href="{% url 'proyectos:proyectos' %}">PROYECTOS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Imágenes y Descripción del Estudio de Arquitectura -->
+    <div class="descripcion">
+        <img class="descripcion_presentacion" src="{% static 'img/4k2.jpg' %}" alt="Background Estudio">
+        <div class="descripcion_contenedor">
+            <div class="descripcion_contenedor_texto">
+                <img class="descripcion_contenedor_texto_logo" src="{% static 'img/edificarLogo3.png' %}" alt="Logotipo">
+                <p class="descripcion_contenedor_texto_parrafo">¡Tu sueño, nuestro principal objetivo!</p>
+            </div>
+            <hr class="descripcion_contenedor_hr">
+            <div>
+                <p class="descripcion_contenedor_acerca">
+                    Diseño, Proyecto, Construcción y Visualización 3D (imágenes y videos) en el ámbito privado y público
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Línea separadora entre la imágen y el main -->
+    <div class="separacionAzul"></div>
+
+    <!-- Acerca de: ¿Quienes Somos? ¿Que Hacemos? -->
+    <div id="main" class="main">
+        <a href="#header" class="subir">^</a>
+        <div class="main_contPrincipal">
+            <img class="animado" data-aos="fade-up" src="{% static 'img/fotoQuieneSomos.png' %}" alt="¿Quienes Somos?">
+            <div class="main_contPrincipal_context">
+                <div class="main_contPrincipal_context_text">
+                    <h2>¿Quienes Somos?</h2>
+                    <p>
+                        Somos un Estudio de Arquitectura radicado en la capital de la provincia del Chaco, conformado por jóvenes Profesionales Emprendedores reunidos con la finalidad de Ofrecer Servicios de Diseño, Proyecto, Construcción y Visualización 3D (Imágenes y Videos) en el ámbito Privado y Público.
+                    </p>
+                    <br>
+                    <h2>¿Que Hacemos?</h2>
+                    <p>
+                        Diseño Edilicio, Diseño Urbano, Diseño de Interiores, Documentación Técnica, Construcción.
+                    </p>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- Línea separadora entre la imágen y el main -->
+    <div class="separacionAzul"></div>
+
+    <!-- Acerca de: Contactos -->
+    <div id="contactos" class="contactos">
+        <a href="#header" class="subir">^</a>
+        <div class="contactos_contPrincipal">
+            <img class="animado" data-aos="fade-up" src="{% static 'img/fotoContactos.png' %}" alt="Contactos">
+            <div class="contactos_contPrincipal_contactos">
+                <h2>¡Concretemos tus Proyectos Juntos!</h2>
+                <p>
+                    ¡Tu consulta no nos molesta! Podés comunicarte con nosotros a través de:
+                </p>
+                <br>
+                <br>
+                <div class="contactos_contPrincipal_contactos_enlaces">
+                    <img src="{% static 'img/iconoContactos.png' %}" alt="Contacto">
+                    <a href="tel: +543624703413">Teléfono: +54 362 4 703413</a>
+                </div>
+                <br>
+                <div class="contactos_contPrincipal_contactos_enlaces">
+                    <img src="{% static 'img/iconoCorreo.png' %}" alt="Correo">
+                    <a href="mailto: edificarestudiodearquitectura@gmail.com" target="_blank">Correo: edificarestudiodearquitectura@gmail.com</a>
+                </div>
+                <br>
+                <div class="contactos_contPrincipal_contactos_enlaces">
+                    <img src="{% static 'img/iconoInstagram.png' %}" alt="Instagram">
+                    <a href="https://instagram.com/estudioedificar?igshid=YmMyMTA2M2Y=" target="_blank">Instagram: @estudioedificar</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="footer_p1">Creado por:</p>
+            <img class="footer_img"  src="{% static 'img/logo.png' %}" alt="RedNea">
+            <p class="footer_p2">RedNea - 2023</p>
+        </div>
+    </div>
+<!-- Scripts para la carga -->
+<script src="{% static 'js/loader/loader.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 200,
+    });
+</script>
+</body>
+</html>

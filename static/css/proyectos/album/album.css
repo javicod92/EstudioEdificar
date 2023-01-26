@@ -1,0 +1,333 @@
+/* Configuración para la barra de Navegación - Class: nav */
+.nav{
+    width: 100%;
+    height: 4.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav_navegacion{
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1af3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_navegacion_boton{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_navegacion_boton_img{
+    width: 10rem;
+    height: 100%;
+    background-color: #0c5e72;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_navegacion_boton_img_2{
+    width: 5.5rem;
+    height: fit-content;
+    opacity: 1;
+}
+
+.nav_navegacion_boton_a{
+    position: relative;
+    width: 4rem;
+    height: 2.5rem;
+    border: 1px solid #7a7a7a;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s all;
+}
+
+.nav_navegacion_boton_a:hover{
+    background-color: #188e9e;
+}
+
+.nav_navegacion_boton_a>img{
+    box-sizing: border-box;
+    width: fit-content;
+    height: 100%;
+    padding: 18%;
+}
+
+/* Configuración para la imágen de Presentación - Class: background */
+.background{
+    width: 100%;
+    height: 100vh;
+    min-height: 478px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -5;
+}
+
+/* .background_fondo{
+    width: 100%;
+    height: 20rem;
+    background-color: #0c5e72d8;
+    position: absolute;
+    z-index: 1;
+} */
+
+.background_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+}
+
+.background::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 100px 50px black;
+    position: absolute;
+}
+
+
+/* Configuración de estilos para la portada - Class: portada */
+.portada{
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    min-height: 478px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.portada_cont{
+    width: 55%;
+    height: auto;
+    position: absolute;
+    bottom: 30%;
+    right: 1%;
+}
+
+.portada_desc1{
+    margin: 0;
+    color: white;
+    font-family: 'Encode Sans', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-shadow: 0 0 50px black;
+}
+
+.portada_desc2{
+    margin: 0;
+    color: rgb(224, 224, 224);
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-shadow: 0 0 10px black;
+}
+
+
+/* Configuración para los albumes de fotos - Class: album */
+.album_contenedor{
+    width: 100%;
+    height: auto;
+    min-height: 478px;
+    background-color: #3d3d3de8;
+}
+
+.album{
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    min-height: 478px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.album::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* box-shadow: inset 0 0 150px 0 black; */
+    z-index: 0;
+}
+
+.album_contPpal{
+    width: 90%;
+    height: calc(100% - 4.5rem);
+    box-shadow: 2px 2px 20px 0px #222;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    position: relative;
+}
+
+.album_contPpal::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 200px 50px rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.album_contPpal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.album_contPpal_desc{
+    width: 40%;
+    height: auto;
+    min-height: 25%;
+    box-sizing: border-box;
+    padding: 1.2rem 1.2rem;
+    background-color: #ffffffd5;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border-top-right-radius: 10px; */
+}
+
+.album_contPpal_desc h2{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #0f6d8a;
+}
+
+.album_contPpal_desc p{
+    margin: .5em 0 1em 0;
+    font-family: 'Encode Sans', sans-serif;
+    color: #474747;
+    font-size: 0.9em;
+}
+
+.album_contPpal_desc_boton{
+    width: 7rem;
+    height: 2.2rem;
+    overflow: hidden;
+    border: 1px solid #777777;
+    display: flex;
+    border-radius: 5px;
+}
+
+.album_contPpal_desc_boton a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #0f6d8a;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: 0.3s all;
+}
+
+.album_contPpal_desc_boton a:hover{
+    background-color: #0f6d8a;
+    color: white;
+}
+
+.sep{
+    width: 100%;
+    height: 10rem;
+}
+
+
+/* Configuración para las fotos que contiene cada álbum - Class: fotos */
+.fotos{
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    min-height: 478px;
+    background-color: #3d3d3de8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.fotos_cont{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.fotos_cont_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boton{
+    position: absolute;
+    width: 3rem;
+    height: 6rem;
+    color: white;
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    /* border: 1px solid #d4d4d48f; */
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: 0.2s all;
+}
+
+.boton:hover{
+    opacity: .9;
+}
+
+.avanzar{
+    right: 0;
+}
+
+.retroceder{
+    left: 0;
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s;
+}
+
+.inactive{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
