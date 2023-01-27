@@ -145,59 +145,51 @@
 /* Configuración para los albumes de fotos - Class: album */
 .album_contenedor{
     width: 100%;
-    height: auto;
-    min-height: 478px;
-    background-color: #3d3d3de8;
-}
-
-.album{
-    width: 100%;
     height: calc(100vh - 4.5rem);
     min-height: 478px;
+    background-color: #3d3d3de8;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
-.album::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    /* box-shadow: inset 0 0 150px 0 black; */
-    z-index: 0;
+.album{
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    /* border: 4px solid rgb(255, 255, 255); */
 }
 
 .album_contPpal{
-    width: 90%;
-    height: calc(100% - 4.5rem);
-    box-shadow: 2px 2px 20px 0px #222;
-    /* border-radius: 10px; */
-    overflow: hidden;
+    display: flex;
+    /* Acá el widht lo da el javascript porque se calcula en base al lenght de la cantidad de albumes */
+    height: 100%;
+    margin-left: -100%;
+}
+
+.album_contenedorFotos{
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
-.album_contPpal::after{
+.album_contenedorFotos::after{
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0px 0px 200px 50px rgb(0, 0, 0);
-    z-index: 1;
+    position: absolute;
+    box-shadow: inset 0 0 100px 20px black;
 }
 
 .album_contPpal img{
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    position: absolute;
 }
 
 .album_contPpal_desc{
@@ -207,7 +199,8 @@
     box-sizing: border-box;
     padding: 1.2rem 1.2rem;
     background-color: #ffffffd5;
-    bottom: 0;
+    box-shadow: 2px 2px 20px 0 rgb(0, 0, 0);
+    bottom: 6%;
     left: 0;
     position: absolute;
     z-index: 10;
@@ -305,11 +298,12 @@
     justify-content: center;
     cursor: pointer;
     opacity: 0.75;
-    transition: 0.2s all;
+    transition: 0.3s all;
 }
 
 .boton:hover{
     opacity: .9;
+    width: 8rem;
 }
 
 .avanzar{
