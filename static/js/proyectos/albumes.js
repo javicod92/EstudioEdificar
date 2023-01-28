@@ -3,7 +3,7 @@ let sliderSection = document.getElementsByClassName("album_contenedorFotos"), sl
 const btnLeft = document.getElementById("previous"), btnRight = document.getElementById("next");
 slider.insertAdjacentElement("afterbegin", sliderSectionLast); 
 
-slider.style.width = (100 * sliderSection.length) + '%'
+slider.style.width = (100 * sliderSection.length) + '%';
 
 const time_ms = 500;
 const time_s = time_ms / 1000;
@@ -16,7 +16,7 @@ function Next() {
     setTimeout(function () {
         slider.style.transition = "none";
         slider.insertAdjacentElement("beforeend", n);
-        slider.style.marginLeft = "-100%"
+        slider.style.marginLeft = "-100%";
     }, time_ms);
 };
 
@@ -26,7 +26,7 @@ function previous() {
     setTimeout(function () {
         slider.style.transition = "none";
         slider.insertAdjacentElement("afterbegin", n);
-        slider.style.marginLeft = "-100%"
+        slider.style.marginLeft = "-100%";
     }, time_ms);
 };
 
