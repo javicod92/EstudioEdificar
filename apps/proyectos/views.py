@@ -16,7 +16,7 @@ def Proyectos(request):
 def Fotos_Album(request, pk):
     contexto = dict()
 
-    fotos = fotoAlbum.objects.filter(fotos_id = pk).order_by('-id')
+    fotos = fotoAlbum.objects.filter(fotos_id = pk).order_by('id')
     contexto['fotos'] = fotos
 
     return render(request, 'proyectos/detalle.html', contexto)
