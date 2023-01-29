@@ -166,8 +166,9 @@
 .album_contPpal{
     display: flex;
     /* Acá el widht lo da el javascript porque se calcula en base al lenght de la cantidad de albumes */
+    width: 100%;
     height: 100%;
-    margin-left: -100%;
+    margin-left: 0;
 }
 
 .album_contenedorFotos{
