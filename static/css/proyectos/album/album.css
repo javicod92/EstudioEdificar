@@ -269,19 +269,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: relative;
+    overflow: hidden;
 }
 
-.fotos_cont{
+.recuadro{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /* border: 4px solid rgb(255, 255, 255); */
+}
+
+.total_container{
+    display: flex;
+    /* Acá el widht lo da el javascript porque se calcula en base al lenght de la cantidad de albumes */
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+}
+
+.individual_container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.individual_container img{
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-.fotos_cont_img{
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .boton{

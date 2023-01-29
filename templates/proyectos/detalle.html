@@ -6,16 +6,19 @@
 
 
 {% block content %}
-    <div class="fotos">
-        {% for foto in fotos %}
-        <div class="fotos_cont">
-            <img class='fotos_cont_img inactive' src="{{foto.imagen.url}}" alt="La imágen no puede ser mostrada">
+<div class="fotos">
+    <div class="recuadro">
+        <div class="total_container" id="total_container">
+            {% for foto in fotos %}
+            <div class="individual_container">
+                <img src="{{foto.imagen.url}}" alt="La imágen no puede ser mostrada">
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-        <div class="boton avanzar">&#10095;</div>
-        <div class="boton retroceder">&#10094;</div>
-        
     </div>
-    
-    <script src="{% static 'js/proyectos/fotos.js' %}"></script>
+    <div class="boton avanzar" id="next">&#10095;</div>
+    <div class="boton retroceder" id="previous">&#10094;</div>
+</div>
+
+<script src="{% static 'js/proyectos/fotos.js' %}"></script>
 {% endblock %}
